@@ -344,205 +344,206 @@
             </div>
         </div>
 
-        <!-- TikTok Optimization: Plain anchor link with cache-buster -->
-        <a href="#" class="claim-button" id="mainCTA">
+        <!-- Simplified CTA Button for better reliability -->
+        <a href="https://cycsrd.mcgo2.com/click" class="claim-button" id="mainCTA" target="_blank" rel="noopener noreferrer">
             Start Earning Now
         </a>
-        
-        <!-- TikTok Optimization: Form fallback for webview compatibility -->
-        <form id="fallbackForm" action="https://cycsrd.mcgo2.com/click" method="get" style="display: none;">
-            <input type="hidden" name="cb" id="cacheBuster" value="">
-            <button type="submit" id="fallbackButton">Submit</button>
-        </form>
     </div>
 
     <script>
-        // TikTok Optimization: Generate cache-buster and set URLs
-        function generateCacheBuster() {
-            return Date.now() + Math.floor(Math.random() * 10000);
-        }
-        
-        // Set up URLs with cache-buster on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const cacheBuster = generateCacheBuster();
-            const baseUrl = 'https://cycsrd.mcgo2.com/click';
-            const urlWithCacheBuster = `${baseUrl}?cb=${cacheBuster}`;
-            
-            // Set main CTA as plain anchor (TikTok Optimization #1)
-            document.getElementById('mainCTA').href = urlWithCacheBuster;
-            
-            // Set form fallback cache-buster (TikTok Optimization #4)
-            document.getElementById('cacheBuster').value = cacheBuster;
-            
-            // Additional DNS prefetch (TikTok Optimization #5)
-            const prefetchLink = document.createElement('link');
-            prefetchLink.rel = 'prefetch';
-            prefetchLink.href = urlWithCacheBuster;
-            document.head.appendChild(prefetchLink);
-        });
-
-        // Counter animation (non-blocking)
-        function animateValue(element, start, end, duration) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const currentValue = progress * (end - start) + start;
-                element.textContent = Math.floor(currentValue);
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
-        }
-
-        // Start counter animation on load
-        window.addEventListener('load', function() {
-            const counterElement = document.getElementById('counter');
-            animateValue(counterElement, 0, 100, 2500);
-        });
-
-        // Notification system (optimized for performance)
-        const names = [
-            'Jayden K.', 'Aaliyah M.', 'Carlos R.', 'Destiny W.', 'Malik J.',
-            'Kiara T.', 'Ethan Z.', 'Jasmine L.', 'Diego S.', 'Trinity B.',
-            'Aiden P.', 'Camila V.', 'Jordan C.', 'Ariana G.', 'Mason D.',
-            'Zoe H.', 'Isaiah N.', 'Gabriella F.', 'Liam O.', 'Sophia Y.',
-            'DeAndre W.', 'Fatima A.', 'Kai L.', 'Luna R.', 'Javier M.',
-            'Amara K.', 'Tyrese B.', 'Valentina C.', 'Ryder T.', 'Naomi S.',
-            'Dante P.', 'Aliyah J.', 'Mateo G.', 'Khloe D.', 'Jamal H.',
-            'Zara N.', 'Phoenix R.', 'Layla M.', 'Nico V.', 'Amelia K.',
-            'Darius L.', 'Sienna W.', 'Ezra B.', 'Maya T.', 'Kingston J.',
-            'Nyla F.', 'Roman S.', 'Eliana C.', 'Kayden M.', 'Aubrey P.'
-        ];
-
-        const states = [
-            'CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI',
-            'NJ', 'VA', 'WA', 'AZ', 'MA', 'TN', 'IN', 'MD', 'MO', 'WI',
-            'CO', 'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'NV'
-        ];
-
-        function createNotification() {
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            
-            const randomName = names[Math.floor(Math.random() * names.length)];
-            const randomState = states[Math.floor(Math.random() * states.length)];
-            const randomAmount = Math.floor(Math.random() * 750 + 50);
-            
-            notification.innerHTML = `
-                <div class="notification-icon">💵</div>
-                <div class="notification-content">
-                    <div class="notification-title">Recent Claim</div>
-                    <div class="notification-text">${randomName} from ${randomState} claimed $${randomAmount}!</div>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => notification.classList.add('show'), 100);
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => notification.remove(), 300);
-            }, 5000);
-        }
-
-        // Start notification system
-        setTimeout(() => {
-            createNotification();
-            setInterval(createNotification, Math.random() * 4000 + 8000);
-        }, 3000);
-
-        // Particle animation system
+        // Simplified and more reliable script
         (function() {
-            const canvas = document.getElementById('particles-js');
-            const ctx = canvas.getContext('2d');
-            const particles = [];
-            const particleCount = 25;
-            const maxDistance = 150;
-            const mousePos = { x: null, y: null };
+            'use strict';
             
-            function setCanvasSize() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+            // Counter animation
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const currentValue = progress * (end - start) + start;
+                    element.textContent = Math.floor(currentValue);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
             }
-            setCanvasSize();
-            window.addEventListener('resize', setCanvasSize);
-            
-            window.addEventListener('mousemove', (e) => {
-                mousePos.x = e.clientX;
-                mousePos.y = e.clientY;
-            });
-            
-            class Particle {
-                constructor() {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.vx = (Math.random() - 0.5) * 0.8;
-                    this.vy = (Math.random() - 0.5) * 0.8;
-                    this.radius = 2.5;
+
+            // Start counter animation on load
+            function initCounter() {
+                const counterElement = document.getElementById('counter');
+                if (counterElement) {
+                    animateValue(counterElement, 0, 100, 2500);
+                }
+            }
+
+            // Notification system
+            const names = [
+                'Jayden K.', 'Aaliyah M.', 'Carlos R.', 'Destiny W.', 'Malik J.',
+                'Kiara T.', 'Ethan Z.', 'Jasmine L.', 'Diego S.', 'Trinity B.',
+                'Aiden P.', 'Camila V.', 'Jordan C.', 'Ariana G.', 'Mason D.',
+                'Zoe H.', 'Isaiah N.', 'Gabriella F.', 'Liam O.', 'Sophia Y.',
+                'DeAndre W.', 'Fatima A.', 'Kai L.', 'Luna R.', 'Javier M.',
+                'Amara K.', 'Tyrese B.', 'Valentina C.', 'Ryder T.', 'Naomi S.',
+                'Dante P.', 'Aliyah J.', 'Mateo G.', 'Khloe D.', 'Jamal H.',
+                'Zara N.', 'Phoenix R.', 'Layla M.', 'Nico V.', 'Amelia K.',
+                'Darius L.', 'Sienna W.', 'Ezra B.', 'Maya T.', 'Kingston J.',
+                'Nyla F.', 'Roman S.', 'Eliana C.', 'Kayden M.', 'Aubrey P.'
+            ];
+
+            const states = [
+                'CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI',
+                'NJ', 'VA', 'WA', 'AZ', 'MA', 'TN', 'IN', 'MD', 'MO', 'WI',
+                'CO', 'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'NV'
+            ];
+
+            function createNotification() {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomState = states[Math.floor(Math.random() * states.length)];
+                const randomAmount = Math.floor(Math.random() * 750 + 50);
+                
+                notification.innerHTML = `
+                    <div class="notification-icon">💵</div>
+                    <div class="notification-content">
+                        <div class="notification-title">Recent Claim</div>
+                        <div class="notification-text">${randomName} from ${randomState} claimed $${randomAmount}!</div>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => notification.classList.add('show'), 100);
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.remove();
+                        }
+                    }, 300);
+                }, 5000);
+            }
+
+            // Particle animation system
+            function initParticles() {
+                const canvas = document.getElementById('particles-js');
+                if (!canvas) return;
+                
+                const ctx = canvas.getContext('2d');
+                const particles = [];
+                const particleCount = 25;
+                const maxDistance = 150;
+                const mousePos = { x: null, y: null };
+                
+                function setCanvasSize() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
                 }
                 
-                update() {
-                    this.x += this.vx;
-                    this.y += this.vy;
+                setCanvasSize();
+                window.addEventListener('resize', setCanvasSize);
+                
+                window.addEventListener('mousemove', (e) => {
+                    mousePos.x = e.clientX;
+                    mousePos.y = e.clientY;
+                });
+                
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+                        this.vx = (Math.random() - 0.5) * 0.8;
+                        this.vy = (Math.random() - 0.5) * 0.8;
+                        this.radius = 2.5;
+                    }
                     
-                    if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
-                    if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
-                    
-                    if (mousePos.x !== null && mousePos.y !== null) {
-                        const dx = this.x - mousePos.x;
-                        const dy = this.y - mousePos.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
                         
-                        if (distance < 100) {
-                            const force = (100 - distance) / 100;
-                            this.x += dx * force * 0.02;
-                            this.y += dy * force * 0.02;
+                        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+                        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+                        
+                        if (mousePos.x !== null && mousePos.y !== null) {
+                            const dx = this.x - mousePos.x;
+                            const dy = this.y - mousePos.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (distance < 100) {
+                                const force = (100 - distance) / 100;
+                                this.x += dx * force * 0.02;
+                                this.y += dy * force * 0.02;
+                            }
                         }
+                    }
+                    
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = '#ff4444';
+                        ctx.fill();
                     }
                 }
                 
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = '#ff4444';
-                    ctx.fill();
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+                
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    particles.forEach((particle, i) => {
+                        particle.update();
+                        particle.draw();
+                        
+                        particles.slice(i + 1).forEach(otherParticle => {
+                            const dx = particle.x - otherParticle.x;
+                            const dy = particle.y - otherParticle.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (distance < maxDistance) {
+                                ctx.beginPath();
+                                ctx.moveTo(particle.x, particle.y);
+                                ctx.lineTo(otherParticle.x, otherParticle.y);
+                                const opacity = (1 - distance / maxDistance) * 0.3;
+                                ctx.strokeStyle = `rgba(255, 68, 68, ${opacity})`;
+                                ctx.lineWidth = 1;
+                                ctx.stroke();
+                            }
+                        });
+                    });
+                    
+                    requestAnimationFrame(animate);
+                }
+                
+                animate();
+            }
+
+            // Initialize everything when DOM is ready
+            function init() {
+                try {
+                    initCounter();
+                    initParticles();
+                    
+                    // Start notification system after a delay
+                    setTimeout(() => {
+                        createNotification();
+                        setInterval(createNotification, Math.random() * 4000 + 8000);
+                    }, 3000);
+                } catch (error) {
+                    console.warn('Initialization error:', error);
                 }
             }
-            
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
+
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
             }
-            
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                particles.forEach((particle, i) => {
-                    particle.update();
-                    particle.draw();
-                    
-                    particles.slice(i + 1).forEach(otherParticle => {
-                        const dx = particle.x - otherParticle.x;
-                        const dy = particle.y - otherParticle.y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < maxDistance) {
-                            ctx.beginPath();
-                            ctx.moveTo(particle.x, particle.y);
-                            ctx.lineTo(otherParticle.x, otherParticle.y);
-                            const opacity = (1 - distance / maxDistance) * 0.3;
-                            ctx.strokeStyle = `rgba(255, 68, 68, ${opacity})`;
-                            ctx.lineWidth = 1;
-                            ctx.stroke();
-                        }
-                    });
-                });
-                
-                requestAnimationFrame(animate);
-            }
-            
-            animate();
         })();
     </script>
 </body>
