@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>No More Survey Scams - Get Paid for ALL Your Time | TesterUp</title>
+    
+    <!-- TikTok WebView Optimization -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a1a">
     
     <!-- DNS prefetch for faster redirects -->
     <link rel="dns-prefetch" href="//cycsrd.mcgo2.com">
@@ -32,6 +39,7 @@
         body {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
             position: relative;
             overflow-x: hidden;
             color: #ffffff;
@@ -39,9 +47,11 @@
             align-items: flex-start;
             justify-content: center;
             padding: 60px 15px 20px;
+            padding-top: max(60px, env(safe-area-inset-top, 60px)); /* Safe area for notched devices */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         }
 
-        /* Particle background */
+        /* Particle background - simplified for performance */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -49,6 +59,9 @@
             top: 0;
             left: 0;
             z-index: 1;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 68, 68, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(255, 68, 68, 0.05) 0%, transparent 50%);
         }
 
 
@@ -59,12 +72,12 @@
             padding: 1.5rem;
             position: relative;
             z-index: 2;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             border: 1px solid #ff444433;
             max-width: 380px;
             width: 100%;
             box-shadow: 0 20px 60px rgba(255, 68, 68, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
-            animation: cardFloat 3s ease-in-out infinite;
+            animation: cardFloat 4s ease-in-out infinite;
             color: #1a1a1a;
             margin-bottom: 20px;
             margin-top: 0px;
@@ -93,7 +106,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            animation: iconShine 3s infinite;
+            animation: iconShine 5s infinite;
             box-shadow: 0 6px 24px rgba(255, 68, 68, 0.3);
             border: 2px solid #f0f0f0;
         }
@@ -117,7 +130,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: moneyGlow 2s infinite;
+            animation: moneyGlow 3s infinite;
         }
 
         @keyframes moneyGlow {
@@ -273,6 +286,11 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            /* TikTok WebView optimizations */
+            -webkit-appearance: none;
+            appearance: none;
+            min-height: 44px; /* Minimum touch target size */
+            -webkit-tap-highlight-color: rgba(255, 68, 68, 0.3);
         }
 
         .claim-button::before {
@@ -316,7 +334,7 @@
             font-size: 12px;
             color: #ffffff;
             z-index: 1000;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             max-width: 280px;
@@ -365,13 +383,13 @@
             line-height: 1.2;
         }
 
-        /* Performance optimizations */
+        /* Performance optimizations - reduced for WebView */
         .reward-card {
-            will-change: transform;
+            will-change: auto;
         }
 
         .claim-button {
-            will-change: transform, box-shadow;
+            will-change: auto;
         }
 
         /* Improved mobile responsiveness */
@@ -405,7 +423,7 @@
             }
         }
 
-        /* TikTok-specific optimizations */
+        /* TikTok WebView specific optimizations */
         @media (max-width: 480px) {
             .amount {
                 font-size: 2.2rem;
@@ -417,6 +435,25 @@
             
             .trust-text {
                 font-size: 0.7rem;
+            }
+            
+            /* Ensure proper spacing in TikTok WebView */
+            body {
+                padding-top: max(40px, env(safe-area-inset-top, 40px));
+            }
+        }
+        
+        /* TikTok WebView specific - prevent zoom on input focus */
+        @media screen and (max-width: 480px) {
+            input, textarea, select {
+                font-size: 16px !important;
+            }
+        }
+        
+        /* TikTok WebView - handle status bar */
+        @supports (padding: max(0px)) {
+            body {
+                padding-top: max(60px, env(safe-area-inset-top, 60px));
             }
         }
 
@@ -435,8 +472,8 @@
 </head>
 <body>
 
-    <!-- Particle background canvas -->
-    <canvas id="particles-js"></canvas>
+    <!-- Particle background - static for performance -->
+    <div id="particles-js"></div>
 
     <div class="reward-card">
 
@@ -504,13 +541,13 @@
                     timeLeft--;
                 }, 1000);
                 
-                // Decrease entries occasionally
+                // Decrease entries occasionally - less frequent for performance
                 setInterval(() => {
                     if (entriesLeft > 50) {
-                        entriesLeft -= Math.floor(Math.random() * 3) + 1;
+                        entriesLeft -= Math.floor(Math.random() * 2) + 1;
                         entriesElement.textContent = entriesLeft;
                     }
-                }, 5000);
+                }, 8000);
             }
             
             // Entry Counter Animation
@@ -519,9 +556,9 @@
                 let currentCount = 50000;
                 
                 setInterval(() => {
-                    currentCount += Math.floor(Math.random() * 5) + 1;
+                    currentCount += Math.floor(Math.random() * 3) + 1;
                     counterElement.textContent = currentCount.toLocaleString() + '+';
-                }, 3000);
+                }, 5000);
             }
             
             // Counter animation with improved performance
@@ -599,107 +636,10 @@
                 }, 4000);
             }
 
-            // Optimized particle animation system
+            // Simplified background - no heavy animations
             function initParticles() {
-                const canvas = document.getElementById('particles-js');
-                if (!canvas) return;
-                
-                const ctx = canvas.getContext('2d');
-                const particles = [];
-                const particleCount = 20;
-                const maxDistance = 120;
-                const mousePos = { x: null, y: null };
-                
-                function setCanvasSize() {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
-                }
-                
-                setCanvasSize();
-                window.addEventListener('resize', setCanvasSize);
-                
-                window.addEventListener('mousemove', (e) => {
-                    mousePos.x = e.clientX;
-                    mousePos.y = e.clientY;
-                });
-                
-                class Particle {
-                    constructor() {
-                        this.x = Math.random() * canvas.width;
-                        this.y = Math.random() * canvas.height;
-                        this.vx = (Math.random() - 0.5) * 0.6;
-                        this.vy = (Math.random() - 0.5) * 0.6;
-                        this.radius = 2;
-                    }
-                    
-                    update() {
-                        this.x += this.vx;
-                        this.y += this.vy;
-                        
-                        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
-                        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
-                        
-                        if (mousePos.x !== null && mousePos.y !== null) {
-                            const dx = this.x - mousePos.x;
-                            const dy = this.y - mousePos.y;
-                            const distance = Math.sqrt(dx * dx + dy * dy);
-                            
-                            if (distance < 80) {
-                                const force = (80 - distance) / 80;
-                                this.x += dx * force * 0.015;
-                                this.y += dy * force * 0.015;
-                            }
-                        }
-                    }
-                    
-                    draw() {
-                        ctx.beginPath();
-                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                        ctx.fillStyle = '#ff4444';
-                        ctx.fill();
-                    }
-                }
-                
-                for (let i = 0; i < particleCount; i++) {
-                    particles.push(new Particle());
-                }
-                
-                let animationId;
-                function animate() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    
-                    particles.forEach((particle, i) => {
-                        particle.update();
-                        particle.draw();
-                        
-                        for (let j = i + 1; j < particles.length; j++) {
-                            const otherParticle = particles[j];
-                            const dx = particle.x - otherParticle.x;
-                            const dy = particle.y - otherParticle.y;
-                            const distance = Math.sqrt(dx * dx + dy * dy);
-                            
-                            if (distance < maxDistance) {
-                                ctx.beginPath();
-                                ctx.moveTo(particle.x, particle.y);
-                                ctx.lineTo(otherParticle.x, otherParticle.y);
-                                const opacity = (1 - distance / maxDistance) * 0.2;
-                                ctx.strokeStyle = `rgba(255, 68, 68, ${opacity})`;
-                                ctx.lineWidth = 0.8;
-                                ctx.stroke();
-                            }
-                        }
-                    });
-                    
-                    animationId = requestAnimationFrame(animate);
-                }
-                
-                animate();
-                
-                return () => {
-                    if (animationId) {
-                        cancelAnimationFrame(animationId);
-                    }
-                };
+                // Static background - no performance impact
+                return () => {};
             }
 
             // Initialize everything when DOM is ready
@@ -710,11 +650,11 @@
                     initEntryCounter();
                     const cleanupParticles = initParticles();
                     
-                    // Start notification systems
+                    // Start notification systems - less frequent for performance
                     setTimeout(() => {
                         createWinnerNotification();
-                        setInterval(createWinnerNotification, Math.random() * 6000 + 12000);
-                    }, 3000);
+                        setInterval(createWinnerNotification, Math.random() * 10000 + 15000);
+                    }, 5000);
                     
                     // Cleanup on page unload
                     window.addEventListener('beforeunload', () => {
