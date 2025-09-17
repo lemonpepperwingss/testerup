@@ -2,29 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>No More Survey Scams - Get Paid for ALL Your Time | TesterUp</title>
-    
-    <!-- TikTok WebView Optimization -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#1a1a1a">
-    
-    <!-- DNS prefetch for faster redirects -->
-    <link rel="dns-prefetch" href="//cycsrd.mcgo2.com">
-    <link rel="preconnect" href="https://cycsrd.mcgo2.com">
-    
-    <!-- TikTok Optimization Meta Tags -->
-    <meta name="description" content="Stop getting disqualified after 15 minutes. TesterUp pays for ALL your time - no surveys, no scams. Join 50K+ users earning real money.">
-    <meta property="og:title" content="No More Survey Scams - Get Paid for ALL Your Time | TesterUp">
-    <meta property="og:description" content="Stop getting disqualified after 15 minutes. TesterUp pays for ALL your time - no surveys, no scams. Join 50K+ users earning real money.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="No More Survey Scams - Get Paid for ALL Your Time | TesterUp">
-    <meta name="twitter:description" content="Stop getting disqualified after 15 minutes. TesterUp pays for ALL your time - no surveys, no scams. Join 50K+ users earning real money.">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TesterUp - Get $100 Instantly</title>
     <style>
         * {
             margin: 0;
@@ -37,21 +16,18 @@
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: #342E4A;
             min-height: 100vh;
-            min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
             position: relative;
             overflow-x: hidden;
-            color: #ffffff;
+            color: #2f3033;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
-            padding: 60px 15px 20px;
-            padding-top: max(60px, env(safe-area-inset-top, 60px)); /* Safe area for notched devices */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            padding: 20px;
         }
 
-        /* Particle background - simplified for performance */
+        /* Particle background */
         #particles-js {
             position: fixed;
             width: 100%;
@@ -59,28 +35,21 @@
             top: 0;
             left: 0;
             z-index: 1;
-            background: radial-gradient(circle at 20% 80%, rgba(255, 68, 68, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(255, 68, 68, 0.05) 0%, transparent 50%);
         }
 
-
-        /* Main card */
+        /* Main card with floating animation */
         .reward-card {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 20px;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 1.5rem 1.2rem;
             position: relative;
             z-index: 2;
-            backdrop-filter: blur(5px);
-            border: 1px solid #ff444433;
-            max-width: 380px;
+            backdrop-filter: blur(10px);
+            border: 1px solid #E52B2B33;
+            max-width: 420px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(255, 68, 68, 0.15), 0 8px 32px rgba(0, 0, 0, 0.3);
-            animation: cardFloat 4s ease-in-out infinite;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            margin-top: 0px;
+            box-shadow: 0 10px 30px #E52B2B1a, 0 1px 8px #E52B2B33;
+            animation: cardFloat 3s ease-in-out infinite;
         }
 
         @keyframes cardFloat {
@@ -88,161 +57,84 @@
             50% { transform: translateY(-10px); }
         }
 
-
-        /* Logo section */
-        .cash-icon-container {
+        /* App logo section */
+        .app-logo-container {
             text-align: center;
             margin-bottom: 1rem;
-            padding-bottom: 0;
-            border-bottom: none;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #4c1d951a;
         }
 
-        .cash-icon {
-            width: 100%;
-            height: 50px;
-            background: #ffffff url('https://img.funnelish.com/69400/858897/1756159684-Testerup.png') no-repeat center/cover;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            filter: drop-shadow(0 4px 12px #E52B2B4d);
+            animation: logoShine 3s infinite;
+            display: block;
             margin: 0 auto;
-            animation: iconShine 5s infinite;
-            box-shadow: 0 6px 24px rgba(255, 68, 68, 0.3);
-            border: 2px solid #f0f0f0;
+            border-radius: 24px;
         }
 
-        @keyframes iconShine {
-            0% { box-shadow: 0 8px 32px rgba(255, 68, 68, 0.3); }
-            50% { box-shadow: 0 12px 48px rgba(255, 68, 68, 0.5); }
-            100% { box-shadow: 0 8px 32px rgba(255, 68, 68, 0.3); }
+        @keyframes logoShine {
+            0% { filter: drop-shadow(0 4px 12px #E52B2B4d); }
+            50% { filter: drop-shadow(0 8px 20px #E52B2B80); }
+            100% { filter: drop-shadow(0 4px 12px #E52B2B4d); }
+        }
+
+        .app-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 0.8rem;
+            color: #342E4A;
+            text-shadow: 0 4px 20px #E52B2B4d;
         }
 
         /* Money amount section */
         .amount {
             font-size: 2.5rem;
-            font-weight: 900;
+            font-weight: 700;
             text-align: center;
-            color: #1a1a1a;
-            margin: 0.3rem 0 0.3rem;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            white-space: nowrap;
-            background: linear-gradient(135deg, #ff4444 0%, #ff6b6b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: moneyGlow 3s infinite;
+            color: #E52B2B;
+            margin: 0.5rem 0;
+            text-shadow: 0 4px 20px #E52B2B4d;
+            animation: amountPulse 2s infinite;
         }
 
-        @keyframes moneyGlow {
-            0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 68, 68, 0.3)); }
-            50% { filter: drop-shadow(0 0 15px rgba(255, 68, 68, 0.6)); }
-        }
-
-        #counter {
-            display: inline-block;
-            min-width: 3ch;
-            text-align: center;
+        @keyframes amountPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .amount-subtext {
             text-align: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-            color: #333;
-        }
-
-        /* Problem Agitation Section - REMOVED */
-
-        /* Enhanced urgency badge */
-        .urgency-badge {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 0.8rem;
-            animation: pulse 2s infinite;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .urgency-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: urgencyShine 2s infinite;
-        }
-
-        @keyframes urgencyShine {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .trust-text {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #555;
-            margin-bottom: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Instructions */
-        .instructions-container {
-            margin: 1rem auto 1.5rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border: 1px solid #ff44441a;
-        }
-
-        .social-proof-pill {
-            background: linear-gradient(135deg, #ff4444 0%, #cc3333 100%);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            text-align: center;
-            margin-bottom: 0.8rem;
-            display: inline-block;
-            width: 100%;
-            box-sizing: border-box;
+            margin-bottom: 1rem;
+            color: #342E4A;
+            text-shadow: 0 2px 10px #E52B2B4d;
         }
 
-        .quick-start-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 0.8rem;
-            text-align: center;
+        /* Instructions container */
+        .instructions-container {
+            margin: 1.2rem auto;
+            padding: 1rem;
+            background: #E52B2B0d;
+            border-radius: 16px;
+            border: 1px solid #E52B2B1a;
         }
 
         .instruction-item {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 1rem;
-            color: #1a1a1a;
+            color: #2f3033;
             font-weight: 600;
-            border-bottom: 1px solid #e0e0e0;
         }
 
-        .instruction-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .step-number {
-            background: #ff4444;
+        .number {
+            background: #E52B2B;
             color: white;
             width: 28px;
             height: 28px;
@@ -251,426 +143,356 @@
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
-            font-weight: 900;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(229, 43, 43, 0.2);
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(255, 68, 68, 0.2);
         }
 
-        .instruction-text {
-            flex: 1;
-            font-size: 1.1rem;
-        }
-
-        /* Enhanced CTA Button */
+        /* CTA Button */
         .claim-button {
-            background: linear-gradient(135deg, #ff4444 0%, #cc3333 100%);
+            background: #E52B2B;
             color: white;
             border: none;
-            padding: 1.2rem;
+            padding: 1.1rem;
             border-radius: 50px;
-            font-weight: 900;
-            font-size: 1.1rem;
+            font-weight: 800;
+            font-size: 1.2rem;
             width: 100%;
-            margin: 1.2rem auto 0.5rem;
+            cursor: pointer;
+            margin: 1.2rem auto 0.8rem;
             display: block;
-            box-shadow: 0 12px 40px rgba(255, 68, 68, 0.4), 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px #E52B2B4d, 0 5px 15px #E52B2B33;
             transition: all 0.3s ease;
             text-decoration: none;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            touch-action: manipulation;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            /* TikTok WebView optimizations */
-            -webkit-appearance: none;
-            appearance: none;
-            min-height: 44px; /* Minimum touch target size */
-            -webkit-tap-highlight-color: rgba(255, 68, 68, 0.3);
-        }
-
-        .claim-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .claim-button:hover::before {
-            left: 100%;
         }
 
         .claim-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 50px rgba(255, 68, 68, 0.5), 0 8px 25px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(135deg, #ff5555 0%, #dd4444 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px #E52B2B66, 0 8px 20px #E52B2B4d;
         }
 
         .claim-button:active {
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
-        /* Winner Notifications */
-        .winner-notification {
+
+        /* Notification styles */
+        .notification {
             position: fixed;
             top: 20px;
             left: 50%;
             transform: translateX(-50%) translateY(-100%);
-            background: rgba(0, 0, 0, 0.9);
-            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px #E52B2B33;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            color: #ffffff;
+            gap: 12px;
+            font-size: 14px;
+            color: #2f3033;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            max-width: 280px;
+            border: 1px solid #E52B2B33;
+            transition: transform 0.3s ease;
+            max-width: 320px;
             width: calc(100% - 2rem);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        .winner-notification.show {
+        .notification.show {
             transform: translateX(-50%) translateY(0);
         }
 
-        .winner-avatar {
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        .notification-icon {
+            width: 30px;
+            height: 30px;
+            background: #E52B2B;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 12px;
+            font-size: 14px;
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
         }
 
-        .winner-text {
+        .notification-content {
             flex: 1;
         }
 
-        .winner-name {
+        .notification-title {
             font-weight: 600;
-            margin-bottom: 1px;
-            color: #ffffff;
-            font-size: 11px;
+            margin-bottom: 2px;
+            color: #2f3033;
         }
 
-        .winner-amount {
-            color: #00ff00;
-            font-weight: 700;
-            font-size: 11px;
+        .notification-text {
+            color: #666;
+            font-size: 13px;
         }
 
-        .winner-time {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 10px;
-            line-height: 1.2;
-        }
-
-        /* Performance optimizations - reduced for WebView */
-        .reward-card {
-            will-change: auto;
-        }
-
-        .claim-button {
-            will-change: auto;
-        }
-
-        /* Improved mobile responsiveness */
+        /* Mobile optimizations */
         @media (max-width: 380px) {
-            body {
-                padding: 60px 10px 15px;
-            }
-            
             .reward-card {
-                padding: 1.2rem;
-                max-width: 100%;
-                margin-bottom: 15px;
-                min-height: 500px;
+                padding: 1.2rem 1rem;
             }
             
-            .cash-icon {
-                height: 60px;
+            .app-logo {
+                width: 100px;
+                height: 100px;
             }
             
-            .amount {
-                font-size: 2.5rem;
+            .app-title {
+                font-size: 1.8rem;
             }
             
-            .instruction-item {
-                font-size: 0.9rem;
-            }
-            
-            .claim-button {
-                font-size: 1rem;
-                padding: 1rem;
-            }
-        }
-
-        /* TikTok WebView specific optimizations */
-        @media (max-width: 480px) {
             .amount {
                 font-size: 2.2rem;
             }
             
             .amount-subtext {
-                font-size: 0.85rem;
+                font-size: 1.1rem;
             }
             
-            .trust-text {
-                font-size: 0.7rem;
+            .instruction-item {
+                font-size: 0.95rem;
             }
             
-            /* Ensure proper spacing in TikTok WebView */
-            body {
-                padding-top: max(40px, env(safe-area-inset-top, 40px));
-            }
-        }
-        
-        /* TikTok WebView specific - prevent zoom on input focus */
-        @media screen and (max-width: 480px) {
-            input, textarea, select {
-                font-size: 16px !important;
-            }
-        }
-        
-        /* TikTok WebView - handle status bar */
-        @supports (padding: max(0px)) {
-            body {
-                padding-top: max(60px, env(safe-area-inset-top, 60px));
-            }
-        }
-
-        /* iPhone-specific optimizations */
-        @media (max-width: 414px) and (max-height: 896px) {
-            .reward-card {
-                min-height: 480px;
-                padding: 1.2rem;
-            }
-            
-            body {
-                padding: 60px 15px 20px;
+            .claim-button {
+                font-size: 1.1rem;
+                padding: 1rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Particle background canvas -->
+    <canvas id="particles-js"></canvas>
 
-    <!-- Particle background - static for performance -->
-    <div id="particles-js"></div>
-
+    <!-- Main container -->
     <div class="reward-card">
-
-        <div class="cash-icon-container">
-            <div class="cash-icon"></div>
+        <div class="app-logo-container">
+            <img src="android-icon-192x192.png" 
+                 alt="TesterUp" 
+                 class="app-logo">
+            <div class="app-title">TesterUp</div>
         </div>
 
-        <div class="amount">$<span id="counter">0</span>+</div>
-        <div class="amount-subtext">EARNED TESTING GAMES</div>
-        <div class="trust-text">Get paid for ALL your time • No disqualifications</div>
+        <div class="amount">$<span id="counter">0.00</span></div>
+        <div class="amount-subtext">Instantly sent to you</div>
 
-        <!-- Simple Instructions -->
         <div class="instructions-container">
-            <div class="social-proof-pill">Join <span id="entryCount">50,000+</span> users earning real money</div>
-            <div class="quick-start-title">3 Simple Steps</div>
-            
             <div class="instruction-item">
-                <span class="step-number">1</span>
-                <div class="instruction-text">Download App</div>
+                <span class="number">1</span>
+                <span>Click the Button Below</span>
             </div>
-
             <div class="instruction-item">
-                <span class="step-number">2</span>
-                <div class="instruction-text">Test Games</div>
+                <span class="number">2</span>
+                <span>Download the TesterUp App</span>
             </div>
-
             <div class="instruction-item">
-                <span class="step-number">3</span>
-                <div class="instruction-text">Get Paid</div>
+                <span class="number">3</span>
+                <span>Earn More by Testing Multiple Games</span>
+            </div>
+            <div class="instruction-item">
+                <span class="number">4</span>
+                <span>Pro tip: Make In-App Purchases on the Games to Earn Faster</span>
             </div>
         </div>
 
-        <!-- Enhanced CTA Button -->
-        <a href="https://offerlnks.com/aff_c?offer_id=2414&aff_id=15664&source=Testerx1324" class="claim-button" id="mainCTA" target="_blank" rel="noopener noreferrer">
-            DOWNLOAD TESTERUP NOW
+        <a href="https://offerlnks.com/aff_c?offer_id=2414&aff_id=15664&source=Testerx1324" class="claim-button">
+            Start Earning Now →
         </a>
+
     </div>
 
     <script>
-        // Enhanced script tailored to Playful Rewards audience
-        (function() {
-            'use strict';
-            
-            // Countdown Timer
-            function initCountdown() {
-                const countdownElement = document.getElementById('countdown');
-                const entriesElement = document.getElementById('entriesLeft');
-                
-                let timeLeft = 23 * 3600 + 14 * 60 + 7; // 23:14:07 in seconds
-                let entriesLeft = 247;
-                
-                const timer = setInterval(() => {
-                    const hours = Math.floor(timeLeft / 3600);
-                    const minutes = Math.floor((timeLeft % 3600) / 60);
-                    const seconds = timeLeft % 60;
-                    
-                    countdownElement.textContent = 
-                        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                    
-                    if (timeLeft <= 0) {
-                        clearInterval(timer);
-                        countdownElement.textContent = "00:00:00";
-                    }
-                    
-                    timeLeft--;
-                }, 1000);
-                
-                // Decrease entries occasionally - less frequent for performance
-                setInterval(() => {
-                    if (entriesLeft > 50) {
-                        entriesLeft -= Math.floor(Math.random() * 2) + 1;
-                        entriesElement.textContent = entriesLeft;
-                    }
-                }, 8000);
-            }
-            
-            // Entry Counter Animation
-            function initEntryCounter() {
-                const counterElement = document.getElementById('entryCount');
-                let currentCount = 50000;
-                
-                setInterval(() => {
-                    currentCount += Math.floor(Math.random() * 3) + 1;
-                    counterElement.textContent = currentCount.toLocaleString() + '+';
-                }, 5000);
-            }
-            
-            // Counter animation with improved performance
-            function animateValue(element, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    const currentValue = progress * (end - start) + start;
-                    element.textContent = Math.floor(currentValue);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            }
-
-            // Start counter animation on load
-            function initCounter() {
-                const counterElement = document.getElementById('counter');
-                if (counterElement) {
-                    animateValue(counterElement, 0, 700, 2500);
+        // Counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentValue = progress * (end - start) + start;
+                element.textContent = currentValue.toFixed(2);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
                 }
-            }
+            };
+            window.requestAnimationFrame(step);
+        }
 
-            // Winner Notifications tailored to audience pain points
-            const winnerNames = [
-                'Sarah M.', 'Alex K.', 'Maria L.', 'James R.', 'Emma S.',
-                'David W.', 'Lisa T.', 'Mike J.', 'Anna B.', 'Chris P.'
-            ];
-            
-            const states = [
-                'CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI'
-            ];
-            
-            let winnerNotificationCount = 0;
-            const maxWinnerNotifications = 2;
+        // Start counter animation on load
+        window.addEventListener('load', function() {
+            const counterElement = document.getElementById('counter');
+            animateValue(counterElement, 0, 100, 2000);
+        });
 
-            function createWinnerNotification() {
-                if (winnerNotificationCount >= maxWinnerNotifications) return;
-                
-                const notification = document.createElement('div');
-                notification.className = 'winner-notification';
-                
-                const randomName = winnerNames[Math.floor(Math.random() * winnerNames.length)];
-                const randomState = states[Math.floor(Math.random() * states.length)];
-                const randomAmount = Math.floor(Math.random() * 500 + 300);
-                
-                const messages = [
-                    `${randomName} from ${randomState} just earned $${randomAmount} testing games!`,
-                    `${randomName} from ${randomState} made $${randomAmount} - no surveys needed!`,
-                    `${randomName} from ${randomState} earned $${randomAmount} in 2 hours of game testing!`
-                ];
-                
-                notification.innerHTML = `
-                    <div class="winner-avatar">🎮</div>
-                    <div class="winner-text">
-                        <div class="winner-name">${messages[Math.floor(Math.random() * messages.length)]}</div>
-                        <div class="winner-time">2 minutes ago</div>
-                    </div>
-                `;
-                
-                document.body.appendChild(notification);
-                winnerNotificationCount++;
-                
-                setTimeout(() => notification.classList.add('show'), 100);
+        // Notification names - more diverse and realistic
+        const NAMES = [
+            'Jayden K.', 'Aaliyah M.', 'Carlos R.', 'Destiny W.', 'Malik J.',
+            'Kiara T.', 'Ethan Z.', 'Jasmine L.', 'Diego S.', 'Trinity B.',
+            'Aiden P.', 'Camila V.', 'Jordan C.', 'Ariana G.', 'Mason D.',
+            'Zoe H.', 'Isaiah N.', 'Gabriella F.', 'Liam O.', 'Sophia Y.',
+            'DeAndre W.', 'Fatima A.', 'Kai L.', 'Luna R.', 'Javier M.',
+            'Amara K.', 'Tyrese B.', 'Valentina C.', 'Ryder T.', 'Naomi S.',
+            'Dante P.', 'Aliyah J.', 'Mateo G.', 'Khloe D.', 'Jamal H.',
+            'Zara N.', 'Phoenix R.', 'Layla M.', 'Nico V.', 'Amelia K.',
+            'Darius L.', 'Sienna W.', 'Ezra B.', 'Maya T.', 'Kingston J.',
+            'Nyla F.', 'Roman S.', 'Eliana C.', 'Kayden M.', 'Aubrey P.'
+        ];
+
+        // Most popular US states
+        const STATES = [
+            'CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI',
+            'NJ', 'VA', 'WA', 'AZ', 'MA', 'TN', 'IN', 'MD', 'MO', 'WI',
+            'CO', 'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'NV'
+        ];
+
+        // Create notification function
+        function createNotification() {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            
+            // Get random name and state
+            const randomName = NAMES[Math.floor(Math.random() * NAMES.length)];
+            const randomState = STATES[Math.floor(Math.random() * STATES.length)];
+            
+            // Generate random amount between $20 and $100
+            const randomAmount = (Math.random() * 80 + 20).toFixed(2);
+            
+            notification.innerHTML = `
+                <div class="notification-icon">💵</div>
+                <div class="notification-content">
+                    <div class="notification-title">Recent Claim</div>
+                    <div class="notification-text">${randomName} from ${randomState} claimed ${randomAmount}!</div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            // Hide and remove notification
+            setTimeout(() => {
+                notification.classList.remove('show');
                 setTimeout(() => {
-                    notification.classList.remove('show');
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            notification.remove();
-                            winnerNotificationCount--;
+                    notification.remove();
+                }, 300);
+            }, 5000);
+        }
+
+        // Start notifications
+        setTimeout(() => {
+            createNotification();
+            setInterval(() => {
+                createNotification();
+            }, Math.random() * 4000 + 8000);
+        }, 3000);
+
+        // Geometric particles animation
+        (function() {
+            const canvas = document.getElementById('particles-js');
+            const ctx = canvas.getContext('2d');
+            const particles = [];
+            const particleCount = 30;
+            const maxDistance = 150;
+            const mousePos = { x: null, y: null };
+            
+            // Set canvas size
+            function setCanvasSize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            setCanvasSize();
+            window.addEventListener('resize', setCanvasSize);
+            
+            // Track mouse position
+            window.addEventListener('mousemove', (e) => {
+                mousePos.x = e.clientX;
+                mousePos.y = e.clientY;
+            });
+            
+            // Particle class
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.vx = (Math.random() - 0.5) * 0.8;
+                    this.vy = (Math.random() - 0.5) * 0.8;
+                    this.radius = 3;
+                }
+                
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    
+                    // Bounce off walls
+                    if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+                    if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+                    
+                    // Mouse repulsion
+                    if (mousePos.x !== null && mousePos.y !== null) {
+                        const dx = this.x - mousePos.x;
+                        const dy = this.y - mousePos.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 100) {
+                            const force = (100 - distance) / 100;
+                            this.x += dx * force * 0.02;
+                            this.y += dy * force * 0.02;
                         }
-                    }, 300);
-                }, 4000);
-            }
-
-            // Simplified background - no heavy animations
-            function initParticles() {
-                // Static background - no performance impact
-                return () => {};
-            }
-
-            // Initialize everything when DOM is ready
-            function init() {
-                try {
-                    initCounter();
-                    initCountdown();
-                    initEntryCounter();
-                    const cleanupParticles = initParticles();
-                    
-                    // Start notification systems - less frequent for performance
-                    setTimeout(() => {
-                        createWinnerNotification();
-                        setInterval(createWinnerNotification, Math.random() * 10000 + 15000);
-                    }, 5000);
-                    
-                    // Cleanup on page unload
-                    window.addEventListener('beforeunload', () => {
-                        if (cleanupParticles) cleanupParticles();
-                    });
-                } catch (error) {
-                    console.warn('Initialization error:', error);
+                    }
+                }
+                
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = '#E52B2B';
+                    ctx.fill();
                 }
             }
-
-            // Wait for DOM to be ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', init);
-            } else {
-                init();
+            
+            // Create particles
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
             }
+            
+            // Animation loop
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Update and draw particles
+                particles.forEach((particle, i) => {
+                    particle.update();
+                    particle.draw();
+                    
+                    // Draw connections
+                    particles.slice(i + 1).forEach(otherParticle => {
+                        const dx = particle.x - otherParticle.x;
+                        const dy = particle.y - otherParticle.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < maxDistance) {
+                            ctx.beginPath();
+                            ctx.moveTo(particle.x, particle.y);
+                            ctx.lineTo(otherParticle.x, otherParticle.y);
+                            const opacity = (1 - distance / maxDistance) * 0.4;
+                            ctx.strokeStyle = `rgba(229, 43, 43, ${opacity})`;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    });
+                });
+                
+                requestAnimationFrame(animate);
+            }
+            
+            animate();
         })();
     </script>
 </body>
